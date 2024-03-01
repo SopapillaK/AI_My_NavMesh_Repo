@@ -9,18 +9,39 @@ public class DoorCollisions : MonoBehaviour
     public GameObject door3;
     public GameObject door4;
     public GameObject door5;
+    public AudioClip boop;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.W))
+        {
             door.SetActive(false);
+            AudioSource ac = GetComponent<AudioSource>();
+            ac.PlayOneShot(boop);
+        }
         if (Input.GetKeyDown(KeyCode.V))
-            door2.SetActive(false);
+        {
+            door2.SetActive(false); 
+            AudioSource ac = GetComponent<AudioSource>();
+            ac.PlayOneShot(boop);
+        }
         if (Input.GetKeyDown(KeyCode.J))
+        {
             door3.SetActive(false);
+            AudioSource ac = GetComponent<AudioSource>();
+            ac.PlayOneShot(boop);
+        }
         if (Input.GetKeyDown(KeyCode.C))
+        {
             door4.SetActive(false);
+            AudioSource ac = GetComponent<AudioSource>();
+            ac.PlayOneShot(boop);
+        }
         if (Input.GetKeyDown(KeyCode.T))
+        {
             door5.SetActive(false);
+            AudioSource ac = GetComponent<AudioSource>();
+            ac.PlayOneShot(boop);
+        }    
     }
 }
